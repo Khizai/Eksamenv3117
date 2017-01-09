@@ -10,26 +10,38 @@ body{
 
 h1,h2,h3,h4,h5,h6{
 	font-family: $hfont;
+	color: $txtcolor;
 }
 
 header{
 	color: $txtcolor;
 	background: $bgheadfoot;
-	nav{
+	font-size: 1.2em;
+	#top{
+		h1{
+			padding: 30px 0;
+			font-size: 3em;
+		}
 		padding-top: 30px;
 	}
 	#navigation{
-		padding-top: 20px;
+		// padding-top: 20px;
+		list-style: none;
 		display: flex;
 		justify-content: space-around;
 		li{
 			a{
 				color: $txtcolor;
 				font-weight: bold;
+
+				&:hover{
+					color: lighten($txtcolor, 20%);
+					text-decoration: none;
+				}
 			}
 		}
 	}
-	aside{
+	#bottom{
 		#login{
 			padding-top: 30px;
 			padding-bottom: 10px;
@@ -75,7 +87,7 @@ main{
 		#link4{
 			background: #FDB21B;
 		}
-		article{
+		.mainArticle{
 			opacity: 0.7;
 			img{
 				max-width: 100%;
@@ -124,6 +136,13 @@ footer{
 .border-right{
 	border-right: 1px solid black;
 }
+
+hr{
+	border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+}
+
 
 @media screen and (max-width: 768px){
 	footer{
