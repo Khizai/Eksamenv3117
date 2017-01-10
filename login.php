@@ -21,6 +21,7 @@ else {
 			echo "Success";
 			session_start();
 			$_SESSION['username'] = $userName;
+			$_SESSION['location'] = $row['dbLocation'];
 			$_SESSION['Permission'] = $row['dbPriv'];
 			header("location: index.php");
 		}

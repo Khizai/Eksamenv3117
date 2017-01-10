@@ -25,7 +25,6 @@ header{
 		padding-top: 30px;
 	}
 	#navigation{
-		// padding-top: 20px;
 		list-style: none;
 		display: flex;
 		justify-content: space-around;
@@ -37,10 +36,31 @@ header{
 				&:hover{
 					color: lighten($txtcolor, 20%);
 					text-decoration: none;
+					transition: 0.5s;
 				}
 			}
 		}
 	}
+
+	//SEARCH BAR
+	.stylish-input-group .input-group-addon{
+		background: white;
+	}
+	.stylish-input-group .form-control{
+		border-right:0; 
+		box-shadow:0 0 0; 
+		border-color:#ccc;
+	}
+	.stylish-input-group button{
+		border:0;
+		background:transparent;
+	}
+
+	#imaginary_container > div > input{
+		width: 30%;
+	}
+	//SEARCH BAR
+
 	#bottom{
 		#login{
 			padding-top: 30px;
@@ -77,19 +97,37 @@ main{
 		}
 		#link1{
 			background: #FDA336;
+			opacity: 0.7;
+			&:hover{
+				background: darken(#FDA336, 15%);
+			}
 		}
 		#link2{
 			background: #36D9FD;
+			opacity: 0.7;
+			&:hover{
+				background: darken(#36D9FD, 15%);
+			}
 		}
 		#link3{
 			background: #2AA1BB;
+			opacity: 0.7;
+			&:hover{
+				background: darken(#2AA1BB, 15%);
+			}
 		}
 		#link4{
 			background: #FDB21B;
+			opacity: 0.7;
+			&:hover{
+				background: darken(#FDB21B, 15%);
+			}
 		}
 		.mainArticle{
+			margin: 5px 0;
 			opacity: 0.7;
 			img{
+				padding: 3 px;
 				max-width: 100%;
 			}
 			h3{
@@ -112,16 +150,24 @@ footer{
 	#info{
 		padding: 50px;
 		ul{
+			padding-top: 10px;
 			list-style: none;
 			li{
 				font-weight: bold;
 				img{
-					width: 13%;
+					width: 55px;
 					padding: 3px;
 				}
 			}
 		}
 	}
+}
+
+.sponsor{
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	margin: 5px 0;
+	padding: 5px;
 }
 
 .noGutter{
@@ -137,21 +183,35 @@ footer{
 	border-right: 1px solid black;
 }
 
+.articleid{
+	display: none;
+}
+
 hr{
 	border: 0;
-    border-bottom: 1px dashed #ccc;
-    background: #999;
+	border-bottom: 1px dashed #ccc;
+	background: #999;
 }
 
 
 @media screen and (max-width: 768px){
-	footer{
-		ul{
-			border-right: hidden;
-			text-align:center;
-		}
+	#imaginary_container > div > input{
+		width: 40%;
+	}
+	
+	.xs-noborder{
+		border: none;
 	}
 }
+//KONTAKT SIDE
+#contactform{
+	margin-top: 20px;
+}
 
-
+#map{
+	width: 100%;
+	height: 400px;
+	background: grey;
+	margin: 20px 0;
+}
 

@@ -1,4 +1,4 @@
-﻿<?php session_start(); 
+<?php session_start(); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,10 +27,10 @@
     <div id="bottom" class="col-md-12 pull-right">
       <ul class="col-md-7" id="navigation">
         <li><a href="index.php">Forside</a></li>
-        <li><a href="#" class="activelink">Nyheder</a></li>
+        <li><a href="news.php">Nyheder</a></li>
         <li><a href="#">Sitemap</a></li>
         <li><a href="#">Print</a></li>
-        <li><a href="contact.php">Kontakt</a></li>
+        <li><a href="#" class="activelink">Kontakt </a></li>
         <?php if(isset($_SESSION['username']) && $_SESSION['Permission'] == '3') {
           echo "<li><a href='admin.php'>Admin</a></li>";
         } ?>
@@ -68,52 +68,45 @@
   <!-- LOGIN SYSTEM -->
 </header>
 <main class="container">
-  <section class="col-xs-12 col-md-9">
-    <?php
-    if(isset($_SESSION['username']) && !empty($_SESSION['username'])){ ?>
-    <form class="form-horizontal" id="inputform" action="writepost.php" method="post" id="newPost">
-      <div class="form-group">
-        <label class="control-label col-sm-3" for="imgsrc">Image Source:</label>
-        <div class="col-sm-8">
-          <input type="text" name="imgsrc" class="form-control" id="imgsrc" placeholder="Billednavn og filtype">
-        </div>
+  <div id="info" class="col-md-3">
+    <h3>Her bor vi</h3>
+    <p>
+      Adresse: <br>
+      Kollerødvej 70 <br>
+      Allerød <br>
+      3450 <br>
+      Danmark <br><br>
+      Tlf: 12 34 56 78
+    </p>
+  </div>
+  <form id="contactform" class="form-horizontal col-md-7">
+    <h4 class="col-sm-offset-1">Kontakt os</h4>
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="user">Navn:</label>
+      <div class="col-sm-7">
+        <input type="text" name="user" class="form-control" id="user" placeholder="Lars Larsen">
       </div>
-      <div class="form-group">
-        <label class="control-label col-sm-3" for="imgalt">Image alt text:</label>
-        <div class="col-sm-8">
-          <input type="text" name="imgalt" class="form-control" id="imgalt" placeholder="Billed alt tekst">
-        </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="email">E-mail:</label>
+      <div class="col-sm-7">
+        <input type="email"class="form-control" id="email" placeholder="Lars@larsen.dk">
       </div>
-      <div class="form-group">
-        <label class="control-label col-sm-3" for="heading">Heading:</label>
-        <div class="col-sm-8">
-          <input type="text" name="heading" class="form-control" id="heading" placeholder="Blog overskrift" required>
-        </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="phone">Telefon:</label>
+      <div class="col-sm-7">
+        <input type="text"class="form-control" id="phone" placeholder="12 34 56 78">
       </div>
-      <div class="form-group">
-        <label class="control-label col-sm-3" for="content">Blog tekst:</label>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-3" for="content">Besked:</label>
         <div class="col-sm-8"> 
          <textarea name="content" id="content" cols="50" rows="10"></textarea>
        </div>
-     </div>
-     <input class="btn btn-default" type="submit" name="submit" value="Submit" id="submit"/>
-   </form>
-   <?php
- } 
- ?>
- <?php include "readpost.php" ?>
-</section>
-<aside class="col-md-3 hidden-xs hidden-sm">
-  <div id="sponsors" class="col-xs-12">
-    <div id="text">
-      <h4 class="well">Vores sponsorer</h4>
-    </div>
-    <img src="img/sponsor1.jpg" alt="" class="col-xs-12 sponsor">
-    <img src="img/sponsor2.jpg" alt="" class="col-xs-12 sponsor">
-    <img src="img/sponsor3.jpg" alt="" class="col-xs-12 sponsor">
-    <img src="img/sponsor4.jpg" alt="" class="col-xs-12 sponsor">
-  </div>
-</aside>
+    <input class="btn btn-default col-xs-2 col-sm-offset-1" type="submit" name="submit" value="Send" id="submit"/>
+  </form>
+  <div id="map" class="col-md-12"></div>
 </main>
 <footer class="col-md-12">
   <div id="info">
@@ -130,7 +123,7 @@
       <li>Lørdag:</li>
       <li>09:00</li>
     </ul>
-    <ul class="col-xs-12 col-sm-4 text-center">
+    <ul class="col-xs-12 col-sm-4 ">
       <li><img src="img/guy.jpg" alt="">Thomas Karse</li>
       <li><img src="img/guy2.jpg" alt="">Bjarme Arm</li>
       <li><img src="img/guy3.jpg" alt="">Lisbeth Grøn</li>
@@ -140,6 +133,12 @@
 <!-- JQUERY/BOOTSTRAP -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/myScript.js"></script>
 <!-- JQUERY/BOOTSTRAP -->
+<!-- GOOGLE MAPS API LINK -->
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLadnMYFC5wA5jipdSes7PQfYsS23wKTc&callback=initMap">
+</script>
+<!-- GOOGLE MAPS API LINK -->
 </body>
 </html>

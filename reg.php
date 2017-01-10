@@ -1,4 +1,4 @@
-﻿<?php session_start(); 
+<?php session_start(); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +27,7 @@
     <div id="bottom" class="col-md-12 pull-right">
       <ul class="col-md-7" id="navigation">
         <li><a href="index.php">Forside</a></li>
-        <li><a href="#" class="activelink">Nyheder</a></li>
+        <li><a href="news.php">Nyheder</a></li>
         <li><a href="#">Sitemap</a></li>
         <li><a href="#">Print</a></li>
         <li><a href="contact.php">Kontakt</a></li>
@@ -68,52 +68,33 @@
   <!-- LOGIN SYSTEM -->
 </header>
 <main class="container">
-  <section class="col-xs-12 col-md-9">
-    <?php
-    if(isset($_SESSION['username']) && !empty($_SESSION['username'])){ ?>
-    <form class="form-horizontal" id="inputform" action="writepost.php" method="post" id="newPost">
-      <div class="form-group">
-        <label class="control-label col-sm-3" for="imgsrc">Image Source:</label>
-        <div class="col-sm-8">
-          <input type="text" name="imgsrc" class="form-control" id="imgsrc" placeholder="Billednavn og filtype">
-        </div>
+  <form class="form-horizontal container" action="createuser.php" method="post">
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="newuser">Brugernavn:</label>
+      <div class="col-sm-4">
+        <input type="text" name="newuser" class="form-control" id="newuser" placeholder="Username">
       </div>
-      <div class="form-group">
-        <label class="control-label col-sm-3" for="imgalt">Image alt text:</label>
-        <div class="col-sm-8">
-          <input type="text" name="imgalt" class="form-control" id="imgalt" placeholder="Billed alt tekst">
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-3" for="heading">Heading:</label>
-        <div class="col-sm-8">
-          <input type="text" name="heading" class="form-control" id="heading" placeholder="Blog overskrift" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-3" for="content">Blog tekst:</label>
-        <div class="col-sm-8"> 
-         <textarea name="content" id="content" cols="50" rows="10"></textarea>
-       </div>
-     </div>
-     <input class="btn btn-default" type="submit" name="submit" value="Submit" id="submit"/>
-   </form>
-   <?php
- } 
- ?>
- <?php include "readpost.php" ?>
-</section>
-<aside class="col-md-3 hidden-xs hidden-sm">
-  <div id="sponsors" class="col-xs-12">
-    <div id="text">
-      <h4 class="well">Vores sponsorer</h4>
     </div>
-    <img src="img/sponsor1.jpg" alt="" class="col-xs-12 sponsor">
-    <img src="img/sponsor2.jpg" alt="" class="col-xs-12 sponsor">
-    <img src="img/sponsor3.jpg" alt="" class="col-xs-12 sponsor">
-    <img src="img/sponsor4.jpg" alt="" class="col-xs-12 sponsor">
-  </div>
-</aside>
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="location">Placering:</label>
+      <div class="col-sm-4">
+        <input type="text" name="location" class="form-control" id="location" placeholder="Username">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="newpass">Password:</label>
+      <div class="col-sm-4">
+        <input type="password" name="newpass" class="form-control" id="newpass" placeholder="Password">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="repass">Gentag Password:</label>
+      <div class="col-sm-4">
+        <input type="password" name="repass" class="form-control" id="repass" placeholder="Password">
+      </div>
+    </div>
+    <input class="btn btn-default col-md-1 col-md-offset-2" type="submit" name="submit" value="Submit" id="submit"/>
+  </form>
 </main>
 <footer class="col-md-12">
   <div id="info">
@@ -130,7 +111,7 @@
       <li>Lørdag:</li>
       <li>09:00</li>
     </ul>
-    <ul class="col-xs-12 col-sm-4 text-center">
+    <ul class="col-xs-12 col-sm-4 ">
       <li><img src="img/guy.jpg" alt="">Thomas Karse</li>
       <li><img src="img/guy2.jpg" alt="">Bjarme Arm</li>
       <li><img src="img/guy3.jpg" alt="">Lisbeth Grøn</li>

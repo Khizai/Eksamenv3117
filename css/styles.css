@@ -26,7 +26,19 @@ header {
       font-weight: bold; }
       header #navigation li a:hover {
         color: #072fea;
-        text-decoration: none; }
+        text-decoration: none;
+        transition: 0.5s; }
+  header .stylish-input-group .input-group-addon {
+    background: white; }
+  header .stylish-input-group .form-control {
+    border-right: 0;
+    box-shadow: 0 0 0;
+    border-color: #ccc; }
+  header .stylish-input-group button {
+    border: 0;
+    background: transparent; }
+  header #imaginary_container > div > input {
+    width: 30%; }
   header #bottom #login {
     padding-top: 30px;
     padding-bottom: 10px; }
@@ -53,16 +65,30 @@ main {
         main section .links a i {
           padding: 20px; }
     main section #link1 {
-      background: #FDA336; }
+      background: #FDA336;
+      opacity: 0.7; }
+      main section #link1:hover {
+        background: #e47e02; }
     main section #link2 {
-      background: #36D9FD; }
+      background: #36D9FD;
+      opacity: 0.7; }
+      main section #link2:hover {
+        background: #02bbe4; }
     main section #link3 {
-      background: #2AA1BB; }
+      background: #2AA1BB;
+      opacity: 0.7; }
+      main section #link3:hover {
+        background: #1c6b7d; }
     main section #link4 {
-      background: #FDB21B; }
+      background: #FDB21B;
+      opacity: 0.7; }
+      main section #link4:hover {
+        background: #ca8702; }
     main section .mainArticle {
+      margin: 5px 0;
       opacity: 0.7; }
       main section .mainArticle img {
+        padding: 3 px;
         max-width: 100%; }
       main section .mainArticle h3 {
         text-align: center; }
@@ -77,12 +103,19 @@ footer {
   footer #info {
     padding: 50px; }
     footer #info ul {
+      padding-top: 10px;
       list-style: none; }
       footer #info ul li {
         font-weight: bold; }
         footer #info ul li img {
-          width: 13%;
+          width: 55px;
           padding: 3px; }
+
+.sponsor {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 5px; }
 
 .noGutter {
   padding-left: 0;
@@ -94,14 +127,27 @@ footer {
 .border-right {
   border-right: 1px solid black; }
 
+.articleid {
+  display: none; }
+
 hr {
   border: 0;
   border-bottom: 1px dashed #ccc;
   background: #999; }
 
 @media screen and (max-width: 768px) {
-  footer ul {
-    border-right: hidden;
-    text-align: center; } }
+  #imaginary_container > div > input {
+    width: 40%; }
+
+  .xs-noborder {
+    border: none; } }
+#contactform {
+  margin-top: 20px; }
+
+#map {
+  width: 100%;
+  height: 400px;
+  background: grey;
+  margin: 20px 0; }
 
 /*# sourceMappingURL=styles.css.map */
