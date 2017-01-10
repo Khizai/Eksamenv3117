@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap 101 Template</title>
+  <title>Eksamen V3.1 2017 - Kontakt</title>
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Raleway" rel="stylesheet">
   <!-- GOOGLE FONTS -->
@@ -47,6 +47,7 @@
       </div>
       <!-- LOGIN SYSTEM -->
       <div id="login" class="col-md-12 pull-right noGutter">
+        <!-- Tjekker om der er en bruger logget på-->
         <?php
         if(isset($_SESSION['username']) && !empty($_SESSION['username'])){ ?>
         <div class="col-xs-6 pull-right text-right"><h4>Welcome <?php echo $_SESSION['username']; ?></h4><a href="logout.php?logout=true">Log ud</a></div>
@@ -126,9 +127,9 @@
       <li>09:00</li>
     </ul>
     <ul class="col-xs-12 col-sm-4 ">
-      <li><img src="img/guy.jpg" alt="">Thomas Karse</li>
-      <li><img src="img/guy2.jpg" alt="">Bjarme Arm</li>
-      <li><img src="img/guy3.jpg" alt="">Lisbeth Grøn</li>
+      <li><img src="img/guy.jpg" alt="Billede af Thomas Karse">Thomas Karse</li>
+      <li><img src="img/guy2.jpg" alt="Billeder af Bjarne Arm">Bjarme Arm</li>
+      <li><img src="img/guy3.jpg" alt="Billede af Lisbeth Grøn">Lisbeth Grøn</li>
     </ul>
   </div>
 </footer>

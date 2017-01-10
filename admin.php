@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap 101 Template</title>
+  <title>Eksamen V3.1 2017 - Admin</title>
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Raleway" rel="stylesheet">
   <!-- GOOGLE FONTS -->
@@ -77,9 +77,9 @@
         <li>09:00</li>
       </ul>
       <ul class="col-xs-12 col-sm-4 text-center">
-        <li><img src="img/guy.jpg" alt="">Thomas Karse</li>
-        <li><img src="img/guy2.jpg" alt="">Bjarme Arm</li>
-        <li><img src="img/guy3.jpg" alt="">Lisbeth Grøn</li>
+        <li><img src="img/guy.jpg" alt="Billede af Thomas Karse">Thomas Karse</li>
+      <li><img src="img/guy2.jpg" alt="Billeder af Bjarne Arm">Bjarme Arm</li>
+      <li><img src="img/guy3.jpg" alt="Billede af Lisbeth Grøn">Lisbeth Grøn</li>
       </ul>
     </div>
   </footer>
