@@ -53,7 +53,7 @@ main {
   main section {
     margin-top: 10px; }
     main section .links {
-      border-radius: 3px;
+      border-radius: 5px;
       margin-bottom: 5px;
       height: 110px; }
       main section .links a {
@@ -88,7 +88,7 @@ main {
       margin: 5px 0;
       opacity: 0.7; }
       main section .mainArticle img {
-        padding: 3 px;
+        padding: 3px;
         max-width: 100%; }
       main section .mainArticle h3 {
         text-align: center; }
@@ -111,11 +111,41 @@ footer {
           width: 55px;
           padding: 3px; }
 
+#createpost {
+  margin: 10px;
+  padding: 10px;
+  background: lightgrey;
+  border: 1px solid lightgrey;
+  border-radius: 5px; }
+
+.postname {
+  color: #bbb;
+  font-style: italic;
+  font-weight: bold; }
+
 .sponsor {
   border: 1px solid lightgrey;
   border-radius: 5px;
   margin: 5px 0;
   padding: 5px; }
+
+.articleid {
+  display: none; }
+
+#contactinfo {
+  background: lightgrey;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin: 10px 0; }
+
+#map {
+  width: 100%;
+  height: 400px;
+  background: grey;
+  margin: 20px 0; }
+
+#submit {
+  background: #FFC63C; }
 
 .noGutter {
   padding-left: 0;
@@ -126,9 +156,6 @@ footer {
 
 .border-right {
   border-right: 1px solid black; }
-
-.articleid {
-  display: none; }
 
 hr {
   border: 0;
@@ -141,13 +168,5 @@ hr {
 
   .xs-noborder {
     border: none; } }
-#contactform {
-  margin-top: 20px; }
-
-#map {
-  width: 100%;
-  height: 400px;
-  background: grey;
-  margin: 20px 0; }
 
 /*# sourceMappingURL=styles.css.map */

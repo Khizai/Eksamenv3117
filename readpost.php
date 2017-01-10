@@ -12,7 +12,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 		if ($_SESSION['Permission'] == '3'){?>
 		<article class="col-md-12 noGutter">
 			<h3><?php echo $row["heading"]; ?></h3>
-			<p><?php echo $row["user"]." ".$row['location']." ".$posttime; ?></p>
+			<p class="postname"><?php echo $row["user"].", ".$row['location'].", ".$posttime; ?></p>
 			<img class="img-responsive" src="<?php echo $row["imgurl"]; ?>" alt="<?php echo $row["imgalt"]; ?>">
 			<p><?php echo $row["content"]; ?></p>
 			<form action="deletepost.php" method="post">
@@ -24,7 +24,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 		<?php } else if($_SESSION['Permission'] == '2'){ ?>
 		<article class="col-md-10 col-md-offset-1 noGutter">
 			<h3><?php echo $row["heading"]; ?></h3>
-			<p><?php echo $row["user"]." ".$row['location']." ".$posttime; ?></p>
+			<p class="postname"><?php echo $row["user"].", ".$row['location'].", ".$posttime; ?></p>
 			<img class="img-responsive" src="<?php echo $row["imgurl"]; ?>" alt="<?php echo $row["imgalt"]; ?>">
 			<p><?php echo $row["content"]; ?></p>
 			<?php if($row['user'] == $_SESSION['username']){ ?>
@@ -39,7 +39,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 		else{ ?>
 		<article class="col-md-10 col-md-offset-1 noGutter">
 			<h3><?php echo $row["heading"]; ?></h3>
-			<p><?php echo $row["user"]." ".$row['location']." ".$posttime; ?></p>
+			<p class="postname"><?php echo $row["user"].", ".$row['location'].", ".$posttime; ?></p>
 			<img class="img-responsive" src="<?php echo $row["imgurl"]; ?>" alt="<?php echo $row["imgalt"]; ?>">
 			<p><?php echo $row["content"]; ?></p>
 			<hr>
@@ -49,7 +49,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 	else{ ?>
 	<article class="col-md-10 col-md-offset-1 noGutter">
 		<h3><?php echo $row["heading"]; ?></h3>
-		<p><?php echo $row["user"]." ".$row['location']." ".$posttime; ?></p>
+		<p class="postname"><?php echo $row["user"].", ".$row['location'].", ".$posttime; ?></p>
 		<img class="img-responsive" src="<?php echo $row["imgurl"]; ?>" alt="<?php echo $row["imgalt"]; ?>">
 		<p><?php echo $row["content"]; ?></p>
 		<hr>

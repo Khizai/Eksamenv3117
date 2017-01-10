@@ -49,7 +49,7 @@
       <div id="login" class="col-md-12 pull-right noGutter">
         <?php
         if(isset($_SESSION['username']) && !empty($_SESSION['username'])){ ?>
-        <div class="col-xs-6 pull-right text-right"><h4>Welcome <?php echo $_SESSION['username']; ?></h4><a href="logout.php?logout=true">Log off</a></div>
+        <div class="col-xs-6 pull-right text-right"><h4>Welcome <?php echo $_SESSION['username']; ?></h4><a href="logout.php?logout=true">Log ud</a></div>
         <?php
       }
       else{
@@ -68,47 +68,49 @@
   <!-- LOGIN SYSTEM -->
 </header>
 <main class="container">
-  <div id="info" class="col-md-3">
+  <div id="contactinfo" class="col-md-3">
     <h3>Her bor vi</h3>
     <p>
       Adresse: <br>
-      Kollerødvej 70 <br>
-      Allerød <br>
-      3450 <br>
+      Tågehornvej 32 <br>
+      9300 <br>
+      Ølstykke <br>
       Danmark <br><br>
       Tlf: 12 34 56 78
     </p>
   </div>
-  <form id="contactform" class="form-horizontal col-md-7">
-    <h4 class="col-sm-offset-1">Kontakt os</h4>
-    <div class="form-group">
-      <label class="control-label col-sm-3" for="user">Navn:</label>
-      <div class="col-sm-7">
-        <input type="text" name="user" class="form-control" id="user" placeholder="Lars Larsen">
+  <div id="createpost" class="col-xs-12 col-md-7 noGutter">
+    <form id="contactform" class="form-horizontal col-xs-12 noGutter">
+      <h3 class="col-sm-offset-1">Kontakt os</h3>
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="user">Navn:</label>
+        <div class="col-sm-7">
+          <input type="text" name="user" class="form-control" id="user" placeholder="Lars Larsen">
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-3" for="email">E-mail:</label>
-      <div class="col-sm-7">
-        <input type="email"class="form-control" id="email" placeholder="Lars@larsen.dk">
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="email">E-mail:</label>
+        <div class="col-sm-7">
+          <input type="email"class="form-control" id="email" placeholder="Lars@larsen.dk">
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-3" for="phone">Telefon:</label>
-      <div class="col-sm-7">
-        <input type="text"class="form-control" id="phone" placeholder="12 34 56 78">
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="phone">Telefon:</label>
+        <div class="col-sm-7">
+          <input type="text"class="form-control" id="phone" placeholder="12 34 56 78">
+        </div>
       </div>
-    </div>
-    <div class="form-group">
+      <div class="form-group">
         <label class="control-label col-sm-3" for="content">Besked:</label>
         <div class="col-sm-8"> 
          <textarea name="content" id="content" cols="50" rows="10"></textarea>
        </div>
-    <input class="btn btn-default col-xs-2 col-sm-offset-1" type="submit" name="submit" value="Send" id="submit"/>
-  </form>
-  <div id="map" class="col-md-12"></div>
-</main>
-<footer class="col-md-12">
+       <input class="btn btn-default col-xs-2 col-sm-offset-1" type="submit" name="submit" value="Send" id="submit"/>
+     </form>
+   </div>
+   <div id="map" class="col-md-12"></div>
+ </main>
+ <footer class="col-md-12">
   <div id="info">
     <ul class="text-center col-xs-12 col-sm-3 col-sm-offset-1 border-right xs-noborder">
       <li>Islændere i DK</li>

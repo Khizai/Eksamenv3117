@@ -5,7 +5,7 @@ $imgalt = stripslashes(htmlspecialchars($_POST['imgalt']));
 $heading = stripslashes(htmlspecialchars($_POST['heading']));
 $time = time();
 $content = stripslashes($_POST['content']);
-$currentuser = $_SESSION['username'];
+$currentuser = ucfirst($_SESSION['username']);
 $location = $_SESSION['location'];
 
 require_once('connect.php');

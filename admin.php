@@ -49,52 +49,43 @@
       <div id="login" class="col-md-12 pull-right noGutter">
         <?php
         if(isset($_SESSION['username']) && !empty($_SESSION['username'])){ ?>
-        <div class="col-xs-6 pull-right text-right"><h4>Welcome <?php echo $_SESSION['username']; ?></h4><a href="logout.php?logout=true">Log off</a></div>
+        <div class="col-xs-6 pull-right text-right"><h4>Welcome <?php echo $_SESSION['username']; ?></h4><a href="logout.php?logout=true">Log ud</a></div>
         <?php
       }
       else{
-        ?>
-        <form class="pull-right" method="post" action="login.php">
-          <input type="name" name="username" id="username" placeholder="Bruger" class="" required>
-          <input type="password" name="password" id="password" placeholder="Password" class="" required>
-          <input type="submit" class="btn btn-default" value="Log Ind">
-        </form>
-        <a href="reg.php" class="col-xs-12 text-right">Registrér dig her..</a>
-      </div>
-      <?php
-    } 
-    ?>
-  </div>
-  <!-- LOGIN SYSTEM -->
-</header>
-<main class="container">
-  <?php include "getusers.php" ?>
-</main>
-<footer class="col-md-12">
-  <div id="info">
-    <ul class="text-center col-xs-12 col-sm-3 col-sm-offset-1 border-right xs-noborder">
-      <li>Islændere i DK</li>
-      <li>Tågehornvej 32</li>
-      <li>9300 Ølstykke</li>
-      <li>islandere(at)live.com</li>
-      <li><i class="fa fa-phone-square" aria-hidden="true"></i>12345678</li>
-    </ul>
-    <ul class="text-center col-xs-12 col-sm-3 border-right xs-noborder">
-      <li>Mandag-fredag:</li>
-      <li>08:00-13:00</li>
-      <li>Lørdag:</li>
-      <li>09:00</li>
-    </ul>
-    <ul class="col-xs-12 col-sm-4 text-center">
-      <li><img src="img/guy.jpg" alt="">Thomas Karse</li>
-      <li><img src="img/guy2.jpg" alt="">Bjarme Arm</li>
-      <li><img src="img/guy3.jpg" alt="">Lisbeth Grøn</li>
-    </ul>
-  </div>
-</footer>
-<!-- JQUERY/BOOTSTRAP -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<!-- JQUERY/BOOTSTRAP -->
+      } 
+      ?>
+    </div>
+    <!-- LOGIN SYSTEM -->
+  </header>
+  <main class="container">
+    <?php include "getusers.php" ?>
+  </main>
+  <footer class="col-md-12">
+    <div id="info">
+      <ul class="text-center col-xs-12 col-sm-3 col-sm-offset-1 border-right xs-noborder">
+        <li>Islændere i DK</li>
+        <li>Tågehornvej 32</li>
+        <li>9300 Ølstykke</li>
+        <li>islandere(at)live.com</li>
+        <li><i class="fa fa-phone-square" aria-hidden="true"></i>12345678</li>
+      </ul>
+      <ul class="text-center col-xs-12 col-sm-3 border-right xs-noborder">
+        <li>Mandag-fredag:</li>
+        <li>08:00-13:00</li>
+        <li>Lørdag:</li>
+        <li>09:00</li>
+      </ul>
+      <ul class="col-xs-12 col-sm-4 text-center">
+        <li><img src="img/guy.jpg" alt="">Thomas Karse</li>
+        <li><img src="img/guy2.jpg" alt="">Bjarme Arm</li>
+        <li><img src="img/guy3.jpg" alt="">Lisbeth Grøn</li>
+      </ul>
+    </div>
+  </footer>
+  <!-- JQUERY/BOOTSTRAP -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- JQUERY/BOOTSTRAP -->
 </body>
 </html>

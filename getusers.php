@@ -39,8 +39,10 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
 					<input type="text" name="userlevel" class="form-control" id="repass" value="<?php echo $row["dbPriv"]; ?>">
 				</div>
 			</div>
-			<input class="btn btn-default pull-right" type="submit" name="submit" value="Update" />
+			<input class="btn btn-default pull-right" type="submit" id="submit" name="submit" value="Update" />
 		</form>
-		<hr class="col-sm-12">
+		<hr class="container-fluid">
 	</article>
-	<?php } ?>
+	<?php 
+} 
+?>

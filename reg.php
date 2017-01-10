@@ -49,7 +49,7 @@
       <div id="login" class="col-md-12 pull-right noGutter">
         <?php
         if(isset($_SESSION['username']) && !empty($_SESSION['username'])){ ?>
-        <div class="col-xs-6 pull-right text-right"><h4>Welcome <?php echo $_SESSION['username']; ?></h4><a href="logout.php?logout=true">Log off</a></div>
+        <div class="col-xs-6 pull-right text-right"><h4>Welcome <?php echo $_SESSION['username']; ?></h4><a href="logout.php?logout=true">Log ud</a></div>
         <?php
       }
       else{
@@ -68,33 +68,37 @@
   <!-- LOGIN SYSTEM -->
 </header>
 <main class="container">
-  <form class="form-horizontal container" action="createuser.php" method="post">
-    <div class="form-group">
-      <label class="control-label col-sm-3" for="newuser">Brugernavn:</label>
-      <div class="col-sm-4">
-        <input type="text" name="newuser" class="form-control" id="newuser" placeholder="Username">
+  <div id="createpost" class="col-xs-12">
+    <h3>Opret Bruger</h3>
+    <hr>
+    <form class="form-horizontal container" action="createuser.php" method="post">
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="newuser">Brugernavn:</label>
+        <div class="col-sm-4">
+          <input type="text" name="newuser" class="form-control" id="newuser" placeholder="Username">
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-3" for="location">Placering:</label>
-      <div class="col-sm-4">
-        <input type="text" name="location" class="form-control" id="location" placeholder="Username">
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="location">Lokation:</label>
+        <div class="col-sm-4">
+          <input type="text" name="location" class="form-control" id="location" placeholder="Username">
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-3" for="newpass">Password:</label>
-      <div class="col-sm-4">
-        <input type="password" name="newpass" class="form-control" id="newpass" placeholder="Password">
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="newpass">Password:</label>
+        <div class="col-sm-4">
+          <input type="password" name="newpass" class="form-control" id="newpass" placeholder="Password">
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-3" for="repass">Gentag Password:</label>
-      <div class="col-sm-4">
-        <input type="password" name="repass" class="form-control" id="repass" placeholder="Password">
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="repass">Gentag Password:</label>
+        <div class="col-sm-4">
+          <input type="password" name="repass" class="form-control" id="repass" placeholder="Password">
+        </div>
       </div>
-    </div>
-    <input class="btn btn-default col-md-1 col-md-offset-2" type="submit" name="submit" value="Submit" id="submit"/>
-  </form>
+      <input class="btn btn-default col-md-1 col-md-offset-2" type="submit" name="submit" value="Submit" id="submit"/>
+    </form>
+  </div>
 </main>
 <footer class="col-md-12">
   <div id="info">

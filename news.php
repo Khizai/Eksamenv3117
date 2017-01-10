@@ -49,7 +49,7 @@
       <div id="login" class="col-md-12 pull-right noGutter">
         <?php
         if(isset($_SESSION['username']) && !empty($_SESSION['username'])){ ?>
-        <div class="col-xs-6 pull-right text-right"><h4>Welcome <?php echo $_SESSION['username']; ?></h4><a href="logout.php?logout=true">Log off</a></div>
+        <div class="col-xs-6 pull-right text-right"><h4>Welcome <?php echo $_SESSION['username']; ?></h4><a href="logout.php?logout=true">Log ud</a></div>
         <?php
       }
       else{
@@ -69,8 +69,10 @@
 </header>
 <main class="container">
   <section class="col-xs-12 col-md-9">
+  
     <?php
     if(isset($_SESSION['username']) && !empty($_SESSION['username'])){ ?>
+    <div id="createpost" class="col-xs-12">
     <form class="form-horizontal" id="inputform" action="writepost.php" method="post" id="newPost">
       <div class="form-group">
         <label class="control-label col-sm-3" for="imgsrc">Image Source:</label>
@@ -96,12 +98,13 @@
          <textarea name="content" id="content" cols="50" rows="10"></textarea>
        </div>
      </div>
-     <input class="btn btn-default" type="submit" name="submit" value="Submit" id="submit"/>
+     <input class="btn btn-default col-xs-offset-0 col-sm-offset-1 col-md-offset-2 " type="submit" name="submit" value="Submit" id="submit"/>
    </form>
    <?php
  } 
  ?>
- <?php include "readpost.php" ?>
+</div>
+<?php include "readpost.php" ?>
 </section>
 <aside class="col-md-3 hidden-xs hidden-sm">
   <div id="sponsors" class="col-xs-12">

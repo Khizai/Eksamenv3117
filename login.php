@@ -12,7 +12,7 @@ $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 if (empty($rows)) {
 	echo "Kan ikke finde bruger!";
-	// header("Refresh:3; url=index.php");
+	header("Refresh:3; url=index.php");
 }
 else {
 	

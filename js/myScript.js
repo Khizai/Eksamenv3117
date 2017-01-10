@@ -3,7 +3,7 @@ var x = document.getElementById("demo");
 
 function initMap() {
 
-  var uluru = {lat: 55.8656692, lng: 12.322309700000005};
+  var uluru = {lat: 55.79130271354726, lng: 12.167879957824653};
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 11,
     center: uluru
@@ -13,7 +13,7 @@ function initMap() {
     position: uluru,
     animation:google.maps.Animation.DROP,
     map: map,
-    title:"Work"
+    title:"Her bor vi"
   });
 };
 

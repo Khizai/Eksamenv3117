@@ -1,6 +1,5 @@
 ﻿@import "variables";
 
-
 body{
 	background: $bgbody;
 	display: flex;
@@ -75,13 +74,13 @@ header{
 
 main{
 	background: white;
-	border-radius: 5px;
+	border-radius: $bradius;
 	margin-top: 30px;
 	margin-bottom: 10px;	
 	section{
 		margin-top: 10px;
 		.links{
-			border-radius: 3px;
+			border-radius: $bradius;
 			margin-bottom: 5px;
 			height: 110px;
 			a{
@@ -127,7 +126,7 @@ main{
 			margin: 5px 0;
 			opacity: 0.7;
 			img{
-				padding: 3 px;
+				padding: 3px;
 				max-width: 100%;
 			}
 			h3{
@@ -163,11 +162,51 @@ footer{
 	}
 }
 
+//NYHEDS SIDE
+#createpost{
+	margin: 10px;
+	padding: 10px;
+	background: $bgforms;
+	border: 1px solid lightgrey;
+	border-radius: $bradius;
+}
+
+.postname{
+	color: $txtsender;
+	font-style: italic;
+	font-weight: bold;
+}
+
 .sponsor{
 	border: 1px solid lightgrey;
-	border-radius: 5px;
+	border-radius: $bradius;
 	margin: 5px 0;
 	padding: 5px;
+}
+
+.articleid{
+	display: none;
+}
+//NYHEDS SIDE
+
+//KONTAKT SIDE
+#contactinfo{
+	background: $bgforms;
+	border: 1px solid lightgrey;
+	border-radius: $bradius;
+	margin: 10px 0;
+}
+#map{
+	width: 100%;
+	height: 400px;
+	background: grey;
+	margin: 20px 0;
+}
+
+//KONTAKT SIDE
+
+#submit{
+	background: $bgheadfoot;
 }
 
 .noGutter{
@@ -181,10 +220,6 @@ footer{
 
 .border-right{
 	border-right: 1px solid black;
-}
-
-.articleid{
-	display: none;
 }
 
 hr{
@@ -203,15 +238,3 @@ hr{
 		border: none;
 	}
 }
-//KONTAKT SIDE
-#contactform{
-	margin-top: 20px;
-}
-
-#map{
-	width: 100%;
-	height: 400px;
-	background: grey;
-	margin: 20px 0;
-}
-
