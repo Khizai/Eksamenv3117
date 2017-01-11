@@ -28,12 +28,6 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="control-label col-sm-4" for="updatedpass">Password:</label>
-				<div class="col-sm-8">
-					<input type="text" name="updatedpass" class="form-control" id="updatedpass" value="<?php echo $row["dbPassword"]; ?>">
-				</div>
-			</div>
-			<div class="form-group">
 				<label class="control-label col-sm-4" for="userlevel">admin niveau:</label>
 				<div class="col-sm-8">
 					<input type="text" name="userlevel" class="form-control" id="repass" value="<?php echo $row["dbPriv"]; ?>">

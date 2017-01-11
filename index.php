@@ -33,9 +33,9 @@
         <li><a href="#">Print</a></li>
         <li><a href="contact.php">Kontakt</a></li>
         <!--Tjekker hvorvidt brugeren har admin niveau-->
-        <?php if(isset($_SESSION['username']) && $_SESSION['Permission'] == '3') {
+        <?php if(!empty($_SESSION['username']) && $_SESSION['Permission'] == '3') {
           echo "<li><a href='admin.php'>Admin</a></li>";
-        } ?>
+          } ?>
       </ul>
       <div id="imaginary_container"> 
         <div class="input-group stylish-input-group">
@@ -49,7 +49,7 @@
       </div>
       <!-- LOGIN SYSTEM -->
       <div id="login" class="col-md-12 pull-right noGutter">
-        <!--Tjekker om der er ne bruger logget på-->
+        <!--Tjekker om der er en bruger logget på-->
         <?php
         if(isset($_SESSION['username']) && !empty($_SESSION['username'])){ ?>
         <div class="col-xs-6 pull-right text-right"><h4>Welcome <?php echo $_SESSION['username']; ?></h4><a href="logout.php?logout=true">Log ud</a></div>

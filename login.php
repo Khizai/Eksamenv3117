@@ -15,9 +15,10 @@ if (empty($rows)) {
 	header("Refresh:3; url=index.php");
 }
 else {
-	
 	foreach ($rows as $row) {
-		if ($passWord == $row['dbPassword']) {
+		$hash = $row['dbPassword'];
+		// if ($passWord == $row['dbPassword']) {
+		if (password_verify($passWord, $hash)){
 			echo "Success";
 			session_start();
 			$_SESSION['username'] = $userName;

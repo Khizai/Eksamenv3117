@@ -14,10 +14,11 @@ $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 if (empty($rows)) {
   if (!($newpass == $repass) ){
-    echo "Passwords doesn't match";
+    echo "Passwords matcher ikke";
     header("Refresh:3; url=reg.php");
   }
   else{
+    $newpass = password_hash($newpass, PASSWORD_DEFAULT);
     require_once('connect.php');
     $newUser = $DBH->prepare("INSERT INTO users (dbUsername, dbPassword, dbLocation, dbPriv) VALUES ('$newuser', '$newpass', '$newemail', '1')");
     $newUser->execute();
@@ -25,7 +26,7 @@ if (empty($rows)) {
   }
 }
 else {
-  echo "User already exists";
+  echo "Brugernavn allerede i brug";
   header("Refresh:3; url=reg.php");
 }
 ?>

@@ -17,6 +17,10 @@
   <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="css/styles.css">
   <!-- CUSTOM CSS -->
+  <!-- TINY MCE -->
+  <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>
+  <!-- TINY MCE -->
 </head>
 <body>
   <header class="col-md-12">
@@ -31,7 +35,7 @@
         <li><a href="#">Sitemap</a></li>
         <li><a href="#">Print</a></li>
         <li><a href="contact.php">Kontakt</a></li>
-        <?php if(isset($_SESSION['username']) && $_SESSION['Permission'] == '3') {
+        <?php if(!empty($_SESSION['username']) && $_SESSION['Permission'] == '3') {
           echo "<li><a href='admin.php'>Admin</a></li>";
         } ?>
       </ul>
@@ -69,7 +73,6 @@
 </header>
 <main class="container">
   <section class="col-xs-12 col-md-9">
-  
     <?php
     if(isset($_SESSION['username']) && !empty($_SESSION['username'])){ ?>
     <div id="createpost" class="col-xs-12">
@@ -109,12 +112,12 @@
 <aside class="col-md-3 hidden-xs hidden-sm">
   <div id="sponsors" class="col-xs-12">
     <div id="text">
-      <h4 class="well">Vores sponsorer</h4>
+      <h4 class="well text-center">Vores sponsorer</h4>
     </div>
-    <img src="img/sponsor1.jpg" alt="EKYGARD Piller" class="col-xs-12 sponsor">
-    <img src="img/sponsor2.jpg" alt="Banner reklame for Eggermann" class="col-xs-12 sponsor">
-    <img src="img/sponsor3.jpg" alt="Havens hestefoder" class="col-xs-12 sponsor">
-    <img src="img/sponsor4.jpg" alt="Xanthos Trense Grime" class="col-xs-12 sponsor">
+    <a href="#"><img src="img/sponsor1.jpg" alt="EKYGARD Piller" class="col-xs-12 sponsor"></a>
+    <a href="#"><img src="img/sponsor2.jpg" alt="Banner reklame for Eggermann" class="col-xs-12 sponsor"></a>
+    <a href="#"><img src="img/sponsor3.jpg" alt="Havens hestefoder" class="col-xs-12 sponsor"></a>
+    <a href="#"><img src="img/sponsor4.jpg" alt="Xanthos Trense Grime" class="col-xs-12 sponsor"></a>
   </div>
 </aside>
 </main>

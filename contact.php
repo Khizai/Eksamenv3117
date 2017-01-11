@@ -17,6 +17,10 @@
   <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="css/styles.css">
   <!-- CUSTOM CSS -->
+  <!-- TINY MCE -->
+  <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>
+  <!-- TINY MCE -->
 </head>
 <body>
   <header class="col-md-12">
@@ -69,7 +73,7 @@
   <!-- LOGIN SYSTEM -->
 </header>
 <main class="container">
-  <div id="contactinfo" class="col-md-3">
+  <div id="contactinfo" class="col-xs-12 col-md-3">
     <h3>Her bor vi</h3>
     <p>
       Adresse: <br>
@@ -80,8 +84,8 @@
       Tlf: 12 34 56 78
     </p>
   </div>
-  <div id="createpost" class="col-xs-12 col-md-7 noGutter">
-    <form id="contactform" class="form-horizontal col-xs-12 noGutter">
+  <div id="contactform" class="col-xs-12 col-md-7 noGutter">
+    <form class="form-horizontal col-xs-12 noGutter">
       <h3 class="col-sm-offset-1">Kontakt os</h3>
       <div class="form-group">
         <label class="control-label col-sm-3" for="user">Navn:</label>
@@ -104,9 +108,9 @@
       <div class="form-group">
         <label class="control-label col-sm-3" for="content">Besked:</label>
         <div class="col-sm-8"> 
-         <textarea name="content" id="content" cols="50" rows="10"></textarea>
+         <textarea name="content" id="content" cols="40" rows="10"></textarea>
        </div>
-       <input class="btn btn-default col-xs-2 col-sm-offset-1" type="submit" name="submit" value="Send" id="submit"/>
+       <input class="btn btn-default col-xs-2 col-xs-offset-1 col-sm-offset-2" type="submit" name="submit" value="Send" id="submit"/>
      </form>
    </div>
    <div id="map" class="col-md-12"></div>
@@ -126,7 +130,7 @@
       <li>Lørdag:</li>
       <li>09:00</li>
     </ul>
-    <ul class="col-xs-12 col-sm-4 ">
+    <ul class="col-xs-12 col-sm-4 text-center">
       <li><img src="img/guy.jpg" alt="Billede af Thomas Karse">Thomas Karse</li>
       <li><img src="img/guy2.jpg" alt="Billeder af Bjarne Arm">Bjarme Arm</li>
       <li><img src="img/guy3.jpg" alt="Billede af Lisbeth Grøn">Lisbeth Grøn</li>

@@ -136,7 +136,14 @@ footer {
   background: lightgrey;
   border: 1px solid lightgrey;
   border-radius: 5px;
-  margin: 10px 0; }
+  margin: 10px; }
+
+#contactform {
+  margin: 10px;
+  padding: 10px;
+  background: lightgrey;
+  border: 1px solid lightgrey;
+  border-radius: 5px; }
 
 #map {
   width: 100%;
