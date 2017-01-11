@@ -49,7 +49,7 @@
       <div id="login" class="col-md-12 pull-right noGutter">
         <?php
         if(isset($_SESSION['username']) && !empty($_SESSION['username'])){ ?>
-        <div class="col-xs-6 pull-right text-right"><h4>Welcome <?php echo $_SESSION['username']; ?></h4><a href="logout.php?logout=true">Log ud</a></div>
+        <div class="col-xs-12 pull-right text-right"><h4>Velkommen <?php echo $_SESSION['username']; ?></h4><a href="logout.php?logout=true">Log ud</a></div>
         <?php
       }
       else{

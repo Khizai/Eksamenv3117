@@ -5,10 +5,11 @@ $statement = $DBH->prepare("SELECT * FROM articles ORDER BY articleid DESC");
 $statement->execute();
 
 while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-	$_SESSION['username'] = ucfirst($_SESSION['username']);
+	
 	$posttime = date("d-M-Y H:i", $row["time"]);
 	//Tjekker om der er en bruger logget på
 	if(isset($_SESSION['username']) && !empty($_SESSION['username'])){
+		$_SESSION['username'] = ucfirst($_SESSION['username']);
 		if ($_SESSION['Permission'] == '3'){?>
 		<article class="col-md-12 noGutter">
 			<h3><?php echo $row["heading"]; ?></h3>
